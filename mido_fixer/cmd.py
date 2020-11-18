@@ -70,6 +70,9 @@ class NotificationHandler(object):
             traits = {d[0]: d[2] for d in payload[0]['traits']}
             LOG.debug('Processing notification for %s', traits['resource_id'])
             port_id = traits['resource_id']
+            # We need to wait for the port to exist via the API, sometimes
+            # we're too quick
+            time.sleep(2)
             self.mido_fix(port_id)
         except Exception:
             LOG.exception('Unable to handle notification: %s', payload)
