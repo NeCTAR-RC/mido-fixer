@@ -1,0 +1,6 @@
+keystoneauth1
+python-neutronclient
+oslo.messaging
+oslo.config
+oslo.log
+kazoo
