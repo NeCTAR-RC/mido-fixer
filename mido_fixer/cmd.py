@@ -131,7 +131,7 @@ class main(object):
 
     CONF([],
          project='mido-fixer',
-         default_config_files=['config.conf'])
+         default_config_files=['/etc/mido-fixer/mido-fixer.conf'])
 
     LOG.info('Starting agent')
     agent = Agent()
